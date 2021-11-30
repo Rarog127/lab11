@@ -17,7 +17,7 @@ arch_file.close()
 test = os.listdir(directory_to_extract_to)
 print(test)
 
-print('Задание 2')
+print('\nЗадание 2')
 print('Поиск всех файлов формата txt')
 txt_files = []
 for dirpath, dirnames, filenames in os.walk('.'):
@@ -31,7 +31,7 @@ for filename in txt_files:
     result = hashlib.md5(target_file_data).hexdigest()
     print('{:100s}'.format(filename), result)
 
-print('Задание 3')
+print('\nЗадание 3')
 print('Поиск файла по заданному хешу')
 target_hash = "4636f9ae9fef12ebd56cd39586d33cfb"
 target_file = " "
@@ -50,7 +50,7 @@ print(target_file_data)
 print('\n Полученный хеш: \t' + target_file_hash)
 print('\n Искомый хеш: \t\t' + target_hash)
 
-print('Задание 4')
+print('\nЗадание 4')
 print('Парсинг страницы по полученному хешу')
 r = requests.get(target_file_data)
 result_dct = {}
@@ -82,7 +82,7 @@ print(headers)
 for key, value in result_dct.items():
     print('{:30s}'.format(key), ':', value)
 
-print('Задание 5')
+print('\nЗадание 5')
 print('Запись данных из словаря в файл')
 output = open('data.csv', 'w')
 file_writer = csv.writer(output, delimiter=";")
